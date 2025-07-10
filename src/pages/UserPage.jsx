@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Mail, Phone, MapPin, Globe, User2, LocateFixed } from "lucide-react";
 
 export default function UserPage() {
   const [user, setUser] = useState(null);
@@ -39,33 +38,23 @@ export default function UserPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl">
         <div className="border border-neutral-800 bg-neutral-900 rounded-xl p-6 shadow-sm space-y-4">
           <h2 className="flex items-center gap-2 text-lg font-semibold">
-            <Mail className="w-5 h-5" />
             Contact Information
           </h2>
           <div className="text-sm text-neutral-300 space-y-2 pl-2">
-            <p className="flex items-center gap-2">
-              <Mail size={16} className="text-white" />
-              {user.email}
-            </p>
-            <p className="flex items-center gap-2">
-              <Phone size={16} className="text-white" />
-              {user.phone}
-            </p>
+            <p className="flex items-center gap-2">{user.email}</p>
+            <p className="flex items-center gap-2">{user.phone}</p>
           </div>
         </div>
 
         <div className="border border-neutral-800 bg-neutral-900 rounded-xl p-6 shadow-sm space-y-4">
           <h2 className="flex items-center gap-2 text-lg font-semibold">
-            <MapPin className="w-5 h-5" />
             Address
           </h2>
           <div className="text-sm text-neutral-300 space-y-2 pl-2">
             <p className="flex items-center gap-2">
-              <Globe size={16} className="text-white" />
               {user.address.street} {user.address.number}
             </p>
             <p className="flex items-center gap-2">
-              <MapPin size={16} className="text-white" />
               {user.address.city}, {user.address.zipcode}
             </p>
           </div>
@@ -74,7 +63,6 @@ export default function UserPage() {
 
       <div className="border border-neutral-800 bg-neutral-900 rounded-xl p-6 shadow-sm w-full max-w-4xl space-y-4">
         <h2 className="flex items-center gap-2 text-lg font-semibold">
-          <User2 className="w-5 h-5" />
           User Details
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-neutral-300 pl-2">
