@@ -66,15 +66,12 @@ export default function Users() {
 
           <CardContent className="text-sm text-neutral-300 space-y-2 mt-2">
             <p className="flex items-center gap-2">
-              <Mail size={16} className="text-white" />
               {user.email}
             </p>
             <p className="flex items-center gap-2">
-              <Phone size={16} className="text-white" />
               {user.phone}
             </p>
             <p className="flex items-center gap-2">
-              <MapPin size={16} className="text-white" />
               {user.address.city}, {user.address.street}
             </p>
           </CardContent>
