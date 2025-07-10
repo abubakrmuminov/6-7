@@ -43,13 +43,12 @@ export default function Home() {
       </div>
     );
   }
-  
 
   if (error)
     return (
       <div className="bg-black text-white min-h-screen flex items-center justify-center">
         <p className="text-red-500 text-center">
-          Bratochek hatolik chiqdi, manda hammasi norm, znachit hatolik sizdan 😅
+          hatolik chiqdi, manda hammasi norm, znachit hatolik sizdan 😅
         </p>
       </div>
     );
@@ -77,7 +76,9 @@ export default function Home() {
           </CardContent>
 
           <CardFooter className="flex justify-between items-center">
-            <CardAction className="text-lg font-semibold">${ui.price}</CardAction>
+            <CardAction className="text-lg font-semibold">
+              ${ui.price}
+            </CardAction>
             <Link to={`/product/${ui.id}`}>
               <Button variant="secondary">Details</Button>
             </Link>

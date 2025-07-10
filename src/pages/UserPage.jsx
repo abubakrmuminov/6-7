@@ -22,7 +22,7 @@ export default function UserPage() {
   if (error)
     return (
       <div className="p-6 text-red-500 text-center">
-hatolik chiqdi, sahifani yangilavoring
+        hatolik chiqdi, sahifani yangilavoring
       </div>
     );
   if (!user) return null;
